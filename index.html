@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#1B2735">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+    <title>音乐解析</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="glass-card">
+            <header>
+                <h1>音乐解析工具</h1>
+                <p class="subtitle">支持多种音质选择的音乐解析服务</p>
+            </header>
+
+            <div class="main-section">
+                <div class="search-section">
+                    <div class="input-group">
+                        <input type="text" id="searchInput" placeholder="请输入QQ音乐网页详情链接...">
+                        <button id="searchBtn">
+                            <i class="fas fa-search"></i>
+                            <span>解析</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="results-section">
+                    <div class="quality-options">
+                        <h3>音质选择</h3>
+                        <div class="quality-grid">
+                            <label class="quality-option">
+                                <input type="radio" name="quality" value="128" checked>
+                                <span class="quality-card">
+                                    <i class="fas fa-music"></i>
+                                    <div class="quality-info">
+                                        <span class="quality-name">标准品质</span>
+                                        <span class="quality-detail">MP3 128kbps</span>
+                                    </div>
+                                </span>
+                            </label>
+                            <label class="quality-option">
+                                <input type="radio" name="quality" value="320">
+                                <span class="quality-card">
+                                    <i class="fas fa-headphones"></i>
+                                    <div class="quality-info">
+                                        <span class="quality-name">高品质</span>
+                                        <span class="quality-detail">MP3 320kbps</span>
+                                    </div>
+                                </span>
+                            </label>
+                            <label class="quality-option">
+                                <input type="radio" name="quality" value="flac">
+                                <span class="quality-card">
+                                    <i class="fas fa-gem"></i>
+                                    <div class="quality-info">
+                                        <span class="quality-name">无损品质</span>
+                                        <span class="quality-detail">FLAC</span>
+                                    </div>
+                                </span>
+                            </label>
+                            <label class="quality-option">
+                                <input type="radio" name="quality" value="master">
+                                <span class="quality-card">
+                                    <i class="fas fa-crown"></i>
+                                    <div class="quality-info">
+                                        <span class="quality-name">母带品质</span>
+                                        <span class="quality-detail">Master</span>
+                                    </div>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="results-list">
+                        <h3>搜索结果</h3>
+                        <div class="music-list">
+                            <!-- 搜索结果将通过JavaScript动态添加 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer>
+                <div class="status">
+                    <div id="statusIndicator" class="status-indicator"></div>
+                    <span id="statusText">准备就绪</span>
+                </div>
+                <div class="api-status">
+                    <span>API状态：</span>
+                    <span id="apiStatus" class="status-good">正常</span>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
