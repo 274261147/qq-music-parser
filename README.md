@@ -87,6 +87,36 @@ docker-compose up -d
 
 ## 使用说明
 
+### 获取 QQ 音乐 Cookie
+
+在使用本工具之前，你需要：
+
+1. 登录 QQ 音乐网页版 (https://y.qq.com/)
+2. 打开浏览器开发者工具（F12 或右键 -> 检查）
+3. 切换到 Network（网络）标签
+4. 刷新页面
+5. 在请求列表中找到任意一个请求
+6. 在请求头中找到 "Cookie" 字段
+7. 复制整个 Cookie 值
+
+### 配置 Cookie
+
+将复制的 Cookie 替换到 `yhx_tjh.py` 文件中的以下位置：
+
+```python
+def main():
+    cookie_str = '在这里粘贴你的 Cookie'  # 替换这里的内容
+    qqmusic = QQMusic()
+    qqmusic.set_cookies(cookie_str)
+```
+
+注意：
+- Cookie 包含你的个人信息，请勿分享给他人
+- Cookie 可能会定期失效，需要重新获取
+- 使用自己的 Cookie 可以避免访问限制
+
+### 使用本工具
+
 1. 在输入框中粘贴 QQ 音乐歌曲链接
 2. 选择需要的音质选项
 3. 点击解析按钮

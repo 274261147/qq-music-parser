@@ -184,9 +184,9 @@ class QQMusic:
 
 
 def main():
-    cookie_str = 'your_cookie_string_here'  # Replace with your actual cookie string
+    cookie_str = '{{ cookie_string }}'  # Replace with your actual cookie string
     qqmusic = QQMusic()
-    qqmusic.set_cookies("pgv_pvid=303497752; RK=syctICjTFl; ptcz=9d3b799364e2ccdf43eab3e1d3026fb3810a3d6e886b18f255112f02ded37275; fqm_pvqid=6542fe04-5259-4454-be6e-a4c114ff5db6; ts_uid=1207819404; _clck=1wbhx68|1|fq9|0; ts_refer=www.baidu.com/link; ptui_loginuin=274261147; music_ignore_pskey=202306271436Hn@vBj; tmeLoginType=2; eas_sid=s1n7J3L1F6a6V1A4f470u830G4; _qimei_uuid42=18b0f1104021006df26e23155a1931fe0c766c555f; _qimei_fingerprint=5b899aa6b1cfec6e2cb676b662dc0603; _qimei_q36=; _qimei_h38=fdede4a9f26e23155a1931fe0200000ae18b0f; fqm_sessionid=5c387b29-3ba0-4cd7-adf8-53f2357258ae; pgv_info=ssid=s9918714488; _qpsvr_localtk=0.7854599933014714; euin=owSPowC5oKvl; ts_last=y.qq.com/; login_type=1; psrf_qqopenid=C8167844D4EAA1B01A4BB14DAC2DA71F; wxunionid=; uin=274261147; psrf_qqaccess_token=E331C8BF3A5E3262ABBD70A312FF5C48; wxrefresh_token=; psrf_qqunionid=1E549CC876C9DF659042F0304F279FB3; psrf_musickey_createtime=1732239111; psrf_qqrefresh_token=E3FFBB7C50F51A013003F2576524CA48; wxopenid=; qqmusic_key=Q_H_L_63k3NfNm2eR3oGNIdtkKu3sLa3RyRnJp6rwpO1CwUXxtAje6uXLCFtaufP-ARAllXd_EB7pmmiXzCwVb31PXT0Q;")
+    qqmusic.set_cookies(cookie_str)
 
     song_url = input("Enter the QQ Music song URL: ")
     songmid = qqmusic.ids(song_url)
