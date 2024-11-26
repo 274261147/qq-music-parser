@@ -56,6 +56,23 @@ gunicorn server:app -b 127.0.0.1:8887 -w 4
 # 参考 nginx 配置文件
 ```
 
+## Docker 部署
+
+使用 Docker 是最简单的部署方式：
+
+1. 克隆仓库：
+```bash
+git clone https://github.com/274261147/qq-music-parser.git
+cd qq-music-parser
+```
+
+2. 使用 Docker Compose 启动：
+```bash
+docker-compose up -d
+```
+
+服务将在 http://localhost:8888 启动。
+
 ## 环境要求
 
 - Python 3.6+
